@@ -19,6 +19,8 @@
 
     <properties>
         <mybatis-sprint-boot.version>1.3.2</mybatis-sprint-boot.version>
+        <druid-spring-boot.version>1.1.9</druid-spring-boot.version>
+        <mysql-driver.version>6.0.6</mysql-driver.version>
     </properties>
 
     <dependencyManagement>
@@ -27,12 +29,23 @@
 
             <!--sql-->
             <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-driver.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-sprint-boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot.version}</version>
+            </dependency>
 
         </dependencies>
+
     </dependencyManagement>
 
 
